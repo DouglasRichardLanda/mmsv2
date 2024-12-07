@@ -8,7 +8,7 @@ export default function MainLayout () {
   return (
     <>
       <Header />
-      <main>
+      <main className={`px-40`}>
         <Outlet />
       </main>
       <Footer />

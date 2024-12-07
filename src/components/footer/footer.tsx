@@ -6,7 +6,7 @@
 export default function Footer () {
 
   return (
-    <footer>
+    <footer className={`bg-red-600`}>
       Footer path /
     </footer>
   )
