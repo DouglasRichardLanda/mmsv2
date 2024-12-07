@@ -6,7 +6,7 @@ import {useState} from "react";
 export default function AlbumElement () {
 
   return (
-    <div className={`bg-white/10 p-5`}>
+    <div className={`bg-red-600/60 p-5`}>
       <div className={`mb-5 flex gap-5`}>
         <div>
           <img src="images/PitBullThumbnail.jpg" alt="" className={`w-[300px]`} />
