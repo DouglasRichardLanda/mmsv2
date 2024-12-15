@@ -8,7 +8,7 @@ export default function MainLayout () {
   return (
     <>
       <Header />
-      <main className={`px-40 min-h-screen`}>
+      <main className={`px-5 lg:px-20 xl:px-40 min-h-screen`}>
         <Outlet />
       </main>
       <Footer />

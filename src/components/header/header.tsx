@@ -22,9 +22,9 @@ export default function Header() {
 
   return (
     <>
-      <header className={`fixed top-0 w-full border-b-2 border-gray-500 bg-black/50 hidden md:block`}>
+      <header className={`fixed top-0 w-full lg:border-b-2 border-gray-500 bg-black/50 hidden md:block`}>
         <nav
-          className={`w-full lg:w-[70%] mx-auto p-2 border-x-2 border-gray-500 flex justify-around text-white uppercase text-lg xl:text-3xl xl2:text-4xl font-light`}>
+          className={`w-full lg:w-[70%] mx-auto p-2 lg:border-x-2 border-gray-500 flex justify-around text-white uppercase text-lg xl:text-3xl xl2:text-4xl font-light`}>
           <Link to={`/`} className={`hover:text-red-600 duration-200 p-3`}>Home</Link>
           <Link to={`/news`} className={`hover:text-red-600 duration-200 p-3`}>News</Link>
           <Link to={`/music`} className={`hover:text-red-600 duration-200 p-3`}>Music</Link>
@@ -42,7 +42,7 @@ export default function Header() {
       </header>
 
       <button
-        className={`fixed top-10 left-10 z-[1000] md:hidden`}
+        className={`fixed top-10 right-10 z-[1000] md:hidden`}
         onClick={() => {
         setOpen(prev => !prev)
       }}>
