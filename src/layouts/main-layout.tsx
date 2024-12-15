@@ -11,8 +11,6 @@ export default function MainLayout () {
       <main className={`px-40 min-h-screen`}>
         <Outlet />
       </main>
-      <img src="images/logo2-removebg-preview.png" alt="" className={`fixed left-10 -top-8 w-[200px] hover:animate-spin`}/>
-      <img src="images/logo23-removebg-preview.png" alt="" className={`fixed right-10 -top-8 w-[200px] hover:animate-ping`}/>
       <Footer />
     </>
   )
