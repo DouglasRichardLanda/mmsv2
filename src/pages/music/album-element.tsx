@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import {useState} from "react";
 
 
+// TODO:: after the layout is approved, finish the Song element
 export default function AlbumElement () {
 
   return (
@@ -51,6 +52,7 @@ export function Song () {
       </div>
       {open ? <div className={`bg-gray-300/20 px-5 sm:px-20 py-5 overflow-x-auto`}>
         <pre>
+          Text from DB
         </pre>
       </div> : null}
     </div>

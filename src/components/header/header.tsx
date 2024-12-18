@@ -40,7 +40,7 @@ export default function Header() {
   return (
     <>
       {/*Desktop navigation*/}
-      <header className={`fixed top-0 w-full lg:border-b-2 border-gray-500 bg-black/50 hidden md:block`}>
+      <header className={`fixed top-0 w-full lg:border-b-2 border-gray-500 bg-black/50 hidden md:block z-[800]`}>
         <nav
           className={`w-full lg:w-[70%] mx-auto p-2 lg:border-x-2 border-gray-500 flex justify-around text-white uppercase text-lg xl:text-3xl xl2:text-4xl font-light`}>
           <Link to={`/`} className={`hover:text-red-600 duration-200 p-3`}>Home</Link>
@@ -61,7 +61,7 @@ export default function Header() {
 
       {/*Main Logo img*/}
       <img id={"main-logo"} src="images/logo1-removebg-preview.png" alt="MadMan'sSpirit"
-           className={merge(`hidden xs:block duration-700 fixed top-12 md:top-20 left-[40%] md:left-1/2 -translate-x-1/2 transition-all ease-in-out`, scrollY === 0 ? "w-[70%] md:w-[60%]" : "w-[70%] md:w-1/4")} />
+           className={merge(`hidden xs:block duration-700 fixed top-12 md:top-20 left-[40%] md:left-1/2 -translate-x-1/2 transition-all ease-in-out z-[800]`, scrollY === 0 ? "w-[70%] md:w-[60%]" : "w-[70%] md:w-1/4")} />
 
       {/*Burger button*/}
       <button
@@ -75,7 +75,7 @@ export default function Header() {
 
       {/*Small devices navigation*/}
       <header
-        className={merge(`w-full fixed bg-gray-300 top-0 h-full py-5 duration-300 md:hidden`, open ? "top-0" : "-top-[150%]")}>
+        className={merge(`w-full fixed bg-gray-300 top-0 h-full py-5 duration-300 md:hidden z-[800]`, open ? "top-0" : "-top-[150%]")}>
         <nav
           className={`w-full mx-auto p-2 flex flex-col justify-center uppercase text-2xl font-bold text-gray-800 gap-1`}>
           <Link to={`/`} className={`hover:text-red-600 duration-200 p-3 text-center`}>Home</Link>
