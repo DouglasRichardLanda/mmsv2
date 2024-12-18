@@ -7,7 +7,7 @@ export default function AlbumElement () {
 
   return (
     <div className={`bg-red-600/60 p-5`}>
-      <div className={`mb-5 flex gap-5`}>
+      <div className={`mb-5 flex gap-5 flex-col sm:flex-row`}>
         <div>
           <img src="images/PitBullThumbnail.jpg" alt="" className={`w-[300px]`} />
         </div>
@@ -49,8 +49,9 @@ export function Song () {
           <Link to={`#`}><FaAmazon className={`w-5 h-5 hover:text-red-600 duration-200`} /></Link>
         </div>
       </div>
-      {open ? <div className={`bg-gray-300/20 px-20 py-5`}>
-        Here comes the text
+      {open ? <div className={`bg-gray-300/20 px-5 sm:px-20 py-5 overflow-x-auto`}>
+        <pre>
+        </pre>
       </div> : null}
     </div>
   )

@@ -49,9 +49,9 @@ export default function Header() {
         <HiMenuAlt2 className={merge(`w-20 h-20 duration-300`, open ? "rotate-90 text-gray-800" : "rotate-0 text-white")} />
       </button>
 
-      <header className={merge(`w-full fixed bg-gray-300 top-0 h-full py-10 duration-300 md:hidden`, open ? "top-0": "-top-[100%]")}>
+      <header className={merge(`w-full fixed bg-gray-300 top-0 h-full py-5 duration-300 md:hidden`, open ? "top-0": "-top-[150%]")}>
         <nav
-          className={`w-full mx-auto p-2 flex flex-col justify-center uppercase text-2xl font-bold text-gray-800 gap-5 sm:gap-1`}>
+          className={`w-full mx-auto p-2 flex flex-col justify-center uppercase text-2xl font-bold text-gray-800 gap-1`}>
           <Link to={`/`} className={`hover:text-red-600 duration-200 p-3 text-center`}>Home</Link>
           <Link to={`/news`} className={`hover:text-red-600 duration-200 p-3 text-center`}>News</Link>
           <Link to={`/music`} className={`hover:text-red-600 duration-200 p-3 text-center`}>Music</Link>
