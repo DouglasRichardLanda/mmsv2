@@ -10,11 +10,36 @@ import {
 import {MdClose} from "react-icons/md";
 import {useState} from "react";
 import merge from "../../lib/merge.ts";
+import {cookies, privacy, SectionPartInterface, terms} from "./conditions-dto.ts";
 
+interface Modulwindow {
+  open: boolean,
+  section: SectionPartInterface[] | null
+}
 
 export default function Footer () {
 
-  const [open, setOpen] = useState<boolean>(false)
+  const [modul, setModul] = useState<Modulwindow>({
+    open: false,
+    section: []
+  })
+
+  const module_data = (arg: number) => {
+    switch (arg) {
+      case 1:
+        setModul({open: true, section: terms})
+        break;
+      case 2:
+        setModul({open: true, section: privacy})
+        break;
+      case 3:
+        setModul({open: true, section: cookies})
+        break;
+      default:
+        setModul({open: false, section: null})
+        break;
+    }
+  }
 
   return (
     <>
@@ -32,10 +57,10 @@ export default function Footer () {
               <p className={`font-bold`}>All rights reserved</p>
             </div>
             <div className={`mt-10 flex flex-col items-start`}>
-              <button onClick={() => setOpen(true)} className={`border-b-2 border-gray-500 hover:border-red-600 duration-200 font-bold`}>Terms & conditions</button>
-              <button className={`border-b-2 border-gray-500 hover:border-red-600 duration-200 font-bold`}>Privacy policy</button>
-              <button className={`border-b-2 border-gray-500 hover:border-red-600 duration-200 font-bold`}>Cookies</button>
-              <button className={`border-b-2 border-gray-500 hover:border-red-600 duration-200 font-bold`}>Press</button>
+              <button onClick={() => module_data(1)} className={`border-b-2 border-gray-500 hover:border-red-600 duration-200 font-bold`}>Terms & conditions</button>
+              <button onClick={() => module_data(2)} className={`border-b-2 border-gray-500 hover:border-red-600 duration-200 font-bold`}>Privacy policy</button>
+              <button onClick={() => module_data(3)} className={`border-b-2 border-gray-500 hover:border-red-600 duration-200 font-bold`}>Cookies</button>
+              <Link to={`https://www.quitegreat.co.uk/`} className={`border-b-2 border-gray-500 hover:border-red-600 duration-200 font-bold`}>Press</Link>
             </div>
           </div>
           <div className={`w-full lg:w-2/3 mt-10 lg:mt-0`}>
@@ -81,12 +106,17 @@ export default function Footer () {
         </div>
       </footer>
 
-      <div className={merge(`fixed top-0 w-full h-screen bg-black/60 flex justify-center items-center z-[2000]`, open ? "" : "hidden")}>
-        <div className={`bg-white text-black w-3/4 lg:w-2/3 xl:w-1/2 h-3/4 p-5 relative`}>
+      <div className={merge(`fixed top-0 w-full h-screen bg-black/60 flex justify-center items-center z-[2000]`, modul.open ? "" : "hidden")}>
+        <div className={`bg-white text-black w-3/4 lg:w-2/3 xl:w-1/2 h-3/4 relative`}>
+          {modul.section !== null ? <div className={`overflow-auto w-full h-full p-5`}>{modul.section.map((element, index) => {
+              return (
+                <p key={index} className={merge(`mb-5 tracking-wider font-light`, element.title ? "font-bold mt-5" : "", element.list ? "mb-0 pl-1" : "")}>
+                  {element.part}
+                </p>
+              )
+          })}</div> : null }
 
-
-
-          <button onClick={() => setOpen(false)} className={`absolute text-white -top-10 -right-10 hover:text-red-600 duration-200`}>
+          <button onClick={() => setModul({open: false, section: null})} className={`absolute text-white -top-10 -right-10 hover:text-red-600 duration-200`}>
             <MdClose className={`w-10 h-10`} />
           </button>
         </div>
