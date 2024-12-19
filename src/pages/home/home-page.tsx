@@ -1,4 +1,5 @@
 import {useEffect} from "react";
+import {useLocation} from "react-router-dom";
 
 
 export default function HomePage () {
@@ -9,34 +10,37 @@ export default function HomePage () {
     const picture3 = document.getElementById("home-img-3")
     const picture1 = document.getElementById("home-img-1")
     const picture2 = document.getElementById("home-img-2")
-    window.onload = () => {
+    const animateImages = () => {
       if (picture3) {
         picture3.classList.remove("-top-1/2");
         picture3.classList.add("top-1/2");
       }
+
       if (window.visualViewport) {
         if (picture2) {
           if (window.visualViewport.width > 768) {
-            picture2.classList.remove("lg:-right-[40%]")
-            picture2.classList.add("lg:right-[40%]")
+            picture2.classList.remove("lg:-right-[40%]");
+            picture2.classList.add("lg:right-[40%]");
           } else {
-            picture2.classList.remove("-right-[100%]")
-            picture1.classList.remove("top-[40%]")
-            picture2.classList.add("right-[30%]")
-            picture1.classList.add("top-[30%]")
+            picture2.classList.remove("-right-[100%]");
+            picture2.classList.add("right-[30%]");
           }
         }
         if (picture1) {
           if (window.visualViewport.width > 768) {
-            picture1.classList.remove("lg:-left-[40%]")
-            picture1.classList.add("lg:left-[40%]")
+            picture1.classList.remove("lg:-left-[40%]");
+            picture1.classList.add("lg:left-[40%]");
           } else {
-            picture1.classList.remove("-left-[100%]")
-            picture1.classList.add("left-[30%]")
+            picture1.classList.remove("-left-[100%]");
+            picture1.classList.add("left-[30%]");
           }
         }
       }
-    }
+    };
+    setTimeout(() => {
+      animateImages();
+    }, 500)
+
   }, []);
 
   return (
