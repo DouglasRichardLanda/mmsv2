@@ -51,8 +51,8 @@ export function Song () {
         </div>
       </div>
       {open ? <div className={`bg-gray-300/20 px-5 sm:px-20 py-5 overflow-x-auto`}>
-        <pre>
-          Text from DB
+        <pre className={`break-words whitespace-pre-wrap`}>
+          {`Text from a song`}
         </pre>
       </div> : null}
     </div>

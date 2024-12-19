@@ -4,7 +4,8 @@ import HomePage from "../pages/home/home-page.tsx";
 import NewsPage from "../pages/news/news-page.tsx";
 import MusicPage from "../pages/music/music-page.tsx";
 import VideoPage from "../pages/video-page.tsx";
-import BioPage from "../pages/bio-page.tsx";
+import BioPage from "../pages/bio/bio-page.tsx";
+import AdminPage from "../pages/administration/admin-page.tsx";
 
 
 export default function Navigation () {
@@ -17,6 +18,9 @@ export default function Navigation () {
         <Route path={`music`} element={<MusicPage />} />
         <Route path={`videos`} element={<VideoPage />} />
         <Route path={`bio`} element={<BioPage />} />
+        <Route path={`administration`} element={<AdminPage />} />
+
+        <Route path={`*`} element={<HomePage />} />
       </Route>
     </Routes>
   )

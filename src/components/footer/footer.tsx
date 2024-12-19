@@ -50,18 +50,15 @@ export default function Footer () {
             <div className={`mt-5 lg:mt-20`}>
               Thanks for stopping by! We're always excited to hear from our fans and fellow rock enthusiasts. Drop us a message, and let’s keep the energy alive—your voice is what fuels our music!
             </div>
-            <div className={`mt-10`}>
-              <p>Address and street</p>
-              <p>London <span className={`font-bold`}>12812</span></p>
-              <p>United Kingdom</p>
-              <p className={`font-bold`}>All rights reserved</p>
-            </div>
+
             <div className={`mt-10 flex flex-col items-start`}>
               <button onClick={() => module_data(1)} className={`border-b-2 border-gray-500 hover:border-red-600 duration-200 font-bold`}>Terms & conditions</button>
               <button onClick={() => module_data(2)} className={`border-b-2 border-gray-500 hover:border-red-600 duration-200 font-bold`}>Privacy policy</button>
               <button onClick={() => module_data(3)} className={`border-b-2 border-gray-500 hover:border-red-600 duration-200 font-bold`}>Cookies</button>
               <Link to={`https://www.quitegreat.co.uk/`} className={`border-b-2 border-gray-500 hover:border-red-600 duration-200 font-bold`}>Press</Link>
+              <Link to={`/administration`} className={`border-b-2 border-gray-500 hover:border-red-600 duration-200 font-bold`}>Administration</Link>
             </div>
+            <p className={`mt-5`}>© 2024 Mad Man's Spirit</p>
           </div>
           <div className={`w-full lg:w-2/3 mt-10 lg:mt-0`}>
             <div>
