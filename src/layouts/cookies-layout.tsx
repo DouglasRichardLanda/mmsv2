@@ -4,7 +4,7 @@
 
 export default function Cookies () {
 
-  const show = false;
+  const show = true;
 
   if (!show) {
     return null
