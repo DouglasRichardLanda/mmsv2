@@ -22,7 +22,7 @@ export function NewsArticle () {
       <pre className={`flex flex-col gap-3 break-words whitespace-pre-wrap font-nunito px-5 font-light `}>
           {`Recently we have discovered, that we are already known in Mexico too. Hola amigos! We wish that we could get your attention to our music and that you really enjoy it.
   
-The news about our debut at Mexican Endsessions Magazine starts with " Hace poco la poderosa banda de Punk llamada “Mad Man’s Spirit” ha debutado con un proyecto cargado de energía y adrenalina, este lanzamiento es autenticidad pura para la agrupación ya que aquí nos demuestran de que están hechos, ofrecen temas densos con una atmósfera explosiva, es el perfecto balance entre libertad e intensidad, por ello al escuchar sus temas te sentirás enganchado, si eres un entusiasta de los sonidos picantes y tenaces entonces esta combinación de Rock retro, Rock Pop y Pop Punk será una de las mejores inmersiones que podrás tener… "
+The news about our debut at Mexican Endsessions Magazine starts with " Hace poco la poderosa banda de Punk llamada “Mad Man’s Spirit” ha debutado con un proyecto cargado de energía y adrenalina, este lanzamiento es autenticidad pura para la agrupación ya que aquí nos demuestran de que están hechos, ofrecen temas densos con una atmósfera explosiva, es el perfecto balance entre libertad e intensidad, por ello al escuchar sus temas te sentirás enganchado, si eres un entusiasta de los sonidos picantes y tenaces entonces esta combinación de Rock retro, Rock Pop y Pop Punk será una de las mejores inmersiones que podrás tener…"
 
 In English "Recently the powerful Punk band called "Mad Man's Spirit" has debuted with a project full of energy and adrenaline, this release is pure authenticity for the group since here they show us what they are made of, they offer dense songs with an explosive atmosphere, it is the perfect balance between freedom and intensity, so when listening to their songs you will feel hooked, If you are an enthusiast of spicy and tenacious sounds then this combination of Retro Rock, Pop Rock and Pop Punk will be one of the best dives you can have..."
 
@@ -33,9 +33,6 @@ Muchos gracias Eduargocruz for Your astonishing review of our EP!`}
       <div className={`font-extralight mt-10 flex justify-between flex-col sm:flex-row`}>
         <div>
           Link: <Link to={`#`} className={`font-bold text-red-600 text-xs lg:text-lg`}>https://endsessions.com.mx/2024/08/21/mad-mans-spirit-mad-mans-spirit/</Link>
-        </div>
-        <div className={`w-1/5`}>
-          <img src="/images/signature.png" alt="signature of Tony Slacker"/>
         </div>
       </div>
     </div>
