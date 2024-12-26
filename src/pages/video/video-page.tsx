@@ -12,7 +12,7 @@ export default function VideoPage() {
 
   return (
     <section className={`mb-20`}>
-      <div className={`flex gap-1 justify-center`}>
+      <div className={`flex gap-1 `}>
         <VideoElement image={`/images/PitBullThumbnail.jpg`} path={`https://www.youtube.com/watch?v=oEy0441CHFY`} />
       </div>
     </section>
