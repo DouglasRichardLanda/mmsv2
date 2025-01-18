@@ -5,9 +5,7 @@ import db_connect from "./db-connect";
 dotenv.config()
 const app = express();
 
-
 app.use(express.json())
-
 
 app.listen(3000, async () => {
   console.log("SERVER:: success")
