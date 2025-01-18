@@ -9,7 +9,6 @@ import AdminPage from "../pages/administration/admin-page.tsx";
 
 
 export default function Navigation () {
-
   return (
     <Routes>
       <Route path={`/`} element={<MainLayout />}>
